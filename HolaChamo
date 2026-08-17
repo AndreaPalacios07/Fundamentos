@@ -1,0 +1,5 @@
+Algoritmo HolaChamo
+	Escribir "****************************"
+	Escribir "*       Hola Chamo         *"
+	Escribir "****************************"
+FinAlgoritmo
