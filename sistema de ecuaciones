@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    double A, B, C, D, E, F;
+    double det, detX, detY, X, Y;
+    cout<<"Calculo de sistema de ecuaciones\n";
+    cout<<"Ecuacion 1\n";
+    cout<<"Inserte variable A:\n";
+    cin>>A;
+    cout<<"Inserte variable B:\n";
+    cin>>B;
+    cout<<"Inserte variable C:\n";
+    cin>>C;
+    cout<<"Ecuacion 2\n";
+    cout<<"Inserte variable D:\n";
+    cin>>D;
+    cout<<"Inserte variable E:\n";
+    cin>>E;
+    cout<<"Inserte variable F:\n";
+    cin>>F;
+    det=(A*E)-(B*D);
+    detX=(C*E)-(B*F);
+    detY=(A*F)-(C*D);
+    if (det !=0){
+        X=detX/det;
+        Y=detY/det;
+        cout<<"Solucion unica:\n";
+        cout<<"X="<<X<<"\n";
+        cout<<"Y="<<Y<<"\n";
+    }
+    else{
+        if(detX=0&&detY==0){
+                cout<<"El sistema tiene infintas soluciones\n";
+                
+        }
+        else{
+            cout<<"El sistema de ecuaciones no tiene solucion\n";
+        }
+    }
+    
+    
+    return 0;
+}
