@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int cont, suma=0, N; // cont= 1
+   cout<< "Ingrese el primer numero: ";
+   cin>>N;
+   cont=0;
+    while (cont<N)
+    {
+        cont=cont+1;//cont++
+        suma=suma+cont;
+    }
+    cout<<"El valor de la suma es: "<<suma;
+    return 0;
+}
