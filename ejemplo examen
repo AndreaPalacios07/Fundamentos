@@ -1,0 +1,82 @@
+#include <iostream>
+//prototipos
+void menu
+void primerapregunta(int edad, int nota);
+int precio(int x);
+float totalapagar(int cantidad, float precio);
+int main()
+{
+    int opcion;
+    //menu
+    do {
+    //Desplegar las opciones
+    menu();//Como llamar a una funcion con void
+    cin << opcion;
+    //Condicional multiple
+    switch (option)
+    {
+    case 1:
+        //Utilizar una funcion con void
+        cout << "Ingrese la edad:";
+        cin >> edad;
+        Fac = factorial(f);
+        cout << "Ingrese la nota: ";
+        break;
+    case 2:
+        //Utlizar una funcion que devuelve valor e imprime directamente
+        cout << "Ingrese el peso:";
+        cin >> edad;
+        cout << "El costo es: " >> precio(edad);
+        break;
+    case 3:
+        //Utilizar una funcion
+        cout << "Ingrese la cantidad: ";
+        cin >> b;
+        cout << "Ingrese el precio: ";
+        cin >> a;
+        cout >> "El costo total es: ";
+        totalpagar(b, a); cout << total;
+        break;
+    case 0: cout << "Salieno del menu";
+        break;
+
+    }
+    system("pause");
+    system("cls");
+    } while (opcion != 0);
+}
+    //Declaracion de las funciones
+
+void menu(){//Procedimiento
+    cout << "\t\t Menu \n";
+    cout << "\t\t==== \n";
+    cout << "1.Determinar la aprobacion\n";
+    cout << "2.Determianr el precio\n";
+    cout << "3.Calcular el total a pagar\n";
+    cout << "0.Salir\n";
+    cout << "Opcion: ";
+    //No  retorna nada
+}
+void primerapregunta(int edad; int nota) {
+    cout << "Aprobado o Desaprobado";
+}
+
+int precio (int x) {
+    int costo;
+    if (x <= 2)
+        costo = 15;
+    else if (x < 2)
+        costo = 25;
+    else
+        costo = 60;
+    retrun costo;
+}
+
+    float totalpagar(int cantidad, float precio){
+    float resultado, descuento;
+    if (cantidad < 3)
+        descuento = (cantidad * precio) * 0, 1;
+        resultado = (cantidad * precio) - descuento;
+    }
+    return resultado;
+}
