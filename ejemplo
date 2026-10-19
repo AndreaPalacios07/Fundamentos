@@ -1,0 +1,6 @@
+int main(){
+	int n[10]; // n ews un arreglo de 10 enteros
+	//inicializada los elementos del arreglo n en 0
+	for (int i = 0; I < 10; i++)
+		//establece el elemento de la ubicacion i en 0
+		n[i] = 0;
