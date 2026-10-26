@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+bool esBisiesto(int anio) {
+    return(anio % 400 == 0) || (anio % 4 == 0 && anio % 100 != 0);
+}
+bool esFechaValida(int dia, int mes, int anio) {
+    if (anio <= 0)return false;
+    if (mes < 1 || mes>12)return false;
+    int diaPorMes[] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+    if (esBisiesto(anio)) {
+        diaPorMes[2] = 29;
+    }
+    if (dia<1 || dia>diaPorMes[mes])return false;
+    return true;
+}
+int fechaADias(int dia, int mes, int anio) {
+    int totalDias = 0;
+    for (int a = 1; a < anio; ++a) {
+        totalDias += esBisiesto(a) ? 366 : 365;
+    }
+    int diasPorMes[] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+    if (esBisiesto(anio)) {
+        diasPorMes[2] = 29;
+    }
+    for (int m = 1; m < mes; ++m) {
+        totalDias += diasPorMes[m];
+    }
+    totalDias += dia;
+    return totalDias;
+}
+int main() {
+    int d1, m1, a1;
+    int d2, m2, a2;
+
+    do {
+        cin >> d1 >> m1 >> a1;
+    } while (!esFechaValida(d1, m1, a1));
+
+    do {
+        cin >> d2 >> m2 >> a2;
+    } while (!esFechaValida(d2, m2, a2));
+
+    int diasInicio = fechaADias(d1, m1, a1);
+    int diasEntrega = fechaADias(d2, m2, a2);
+
+    int diferencia = diasEntrega - diasInicio;
+    if (diferencia < 0) {
+        diferencia = -diferencia;
+    }
+
+    cout << diferencia << endl;
+
+    return 0;
+}
